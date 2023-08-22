@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comida_navigation"
+    app:startDestination="@id/comidaFragment">
+
+    <fragment
+        android:id="@+id/comidaFragment"
+        android:name="com.javier.proyecto_final_kotlin.Fragments.Comida"
+        android:label="fragment_comida"
+        tools:layout="@layout/fragment_comida" >
+        <action
+            android:id="@+id/action_comidaFragment_to_comidaDetailFragment"
+            app:destination="@id/comidaDetailFragment"
+            app:popUpTo="@id/comidaDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="com.javier.proyecto_final_kotlin.Fragments.ComidasFavoritas"
+        android:label="fragment_comidas_favoritas"
+        tools:layout="@layout/fragment_comidas_favoritas" >
+        <action
+            android:id="@+id/action_favoritosFragment_to_comidaDetailFragment"
+            app:destination="@id/comidaDetailFragment"
+            app:popUpTo="@id/comidaDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.javier.proyecto_final_kotlin.Fragments.Api"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api" >
+    </fragment>
+    <fragment
+        android:id="@+id/ajustesFragment"
+        android:name="com.javier.proyecto_final_kotlin.Fragments.Ajustes"
+        android:label="fragment_ajustes"
+        tools:layout="@layout/fragment_ajustes" />
+    <fragment
+        android:id="@+id/comidaDetailFragment"
+        android:name="com.javier.proyecto_final_kotlin.Fragments.ComidaDetailFragment"
+        android:label="fragment_comida_detail"
+        tools:layout="@layout/fragment_comida_detail" >
+        <argument
+            android:name="comida"
+            app:argType="com.javier.proyecto_final_kotlin.model.Comida" />
+    </fragment>
+</navigation>
